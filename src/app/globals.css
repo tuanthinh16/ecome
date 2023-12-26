@@ -18,10 +18,34 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 50s linear infinite;
+}
+
+.card-wrapper {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  /* Thêm hiệu ứng chuyển động và làm mờ */
+}
+
+.card-wrapper:hover {
+  /* Điều chỉnh mức độ mờ khi hover */
+  transform: scale(1.1);
+  /* Hiện thẻ được hover lên */
+  z-index: 1;
+  /* Đặt z-index cao để hiện thẻ lên phía trước */
 }
