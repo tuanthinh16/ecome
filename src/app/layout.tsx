@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Open_Sans, Roboto } from 'next/font/google'
 import './globals.css'
 import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
@@ -27,8 +28,11 @@ export default function RootLayout({
         <div>
           <Header />
         </div>
-        <div className='pt-20'>
+        <div className=''>
           {children}
+        </div>
+        <div>
+          <Footer />
         </div>
       </body>
     </html>

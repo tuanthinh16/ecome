@@ -147,10 +147,10 @@ const Header = () => {
                                 )}
                             </button>
                             {menu && (
-                                <div className='flex flex-col gap-2 mt-2 absolute'>
+                                <div className='flex flex-col gap-2 mt-2 absolute p-1 rounded-lg bg-gradient-to-b from-slate-300 to-stone-400 opacity-80'>
                                     {
                                         mmenuOptions.map((item: any, index: number) => (
-                                            <button key={index} className='flex gap-1 p-1 rounded-lg hover:bg-stone-300'>
+                                            <button key={index} className='flex gap-1 p-1 rounded-lg hover:bg-stone-500 hover:text-white hover:opacity-100'>
                                                 {item.icon}
                                                 {item.name}
                                             </button>

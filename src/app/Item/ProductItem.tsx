@@ -34,9 +34,9 @@ const ProductItem = ({ product }: any) => {
         enqueueSnackbar('Add to cart successful', { variant: 'success' })
     }
     return (
-        <div className='flex items-center p-2 items-wrapper min-w-full animate-scroll gap-5 '>
+        <div className='flex flex-wrap items-center md:p-2 ml-0 pl-0 items-wrapper min-w-full animate-scroll gap-5'>
             {product?.map((item: any, index: number) => (
-                <div key={index} className='w-[300px] bg-slate-300 rounded-lg relative m-3 shadow-xl card-wrapper'>
+                <div key={index} className='w-[300px] bg-slate-300 rounded-lg relative md:m-3 shadow-xl card-wrapper'>
                     <div className='h-[200px] text-center p-3 font-semibold text-2xl'>{item.title}</div>
                     <div>
                         <Image src={item.imageUrl[0]} alt="image" width={250} height={250} className='max-h-[250px] mx-[25px] absolute top-[60px] rounded-3xl shadow-2xl' />
